@@ -75,7 +75,7 @@ const UpdateProject = async (req, res) => {
 
 const DeleteProject = async (req, res) => {
   try {
-    const projects = await Project.findByIdandDelete(req.params.id);
+    await Project.findByIdAndDelete(req.params.id);
 
     res.status(200).json({
       status: "success",

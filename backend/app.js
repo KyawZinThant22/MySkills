@@ -6,6 +6,6 @@ const app = express();
 //MiddleWare
 app.use(express.json());
 
-app.use("api/v1/projects", projectRouter);
+app.use("/api/v1/projects", projectRouter);
 
 module.exports = app;

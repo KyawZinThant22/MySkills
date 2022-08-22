@@ -20,7 +20,7 @@ const ProjectSchema = new mongoose.Schema(
       ],
       minlength: [50, "A tour name must have more or equal then 50 characters"],
     },
-    Preview: {
+    preview: {
       type: "String",
       required: [true, "A project must have preview Link"],
     },
@@ -34,8 +34,6 @@ ProjectSchema.pre("save", function (next) {
   next();
 });
 
-const Project = mongoose.model('Project', ProjectSchema);
-
-
+const Project = mongoose.model("Project", ProjectSchema);
 
 module.exports = Project;
